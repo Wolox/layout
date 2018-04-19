@@ -4,7 +4,7 @@
   "description": "Wolox generic layout for frontend projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-lint": "./node_modules/.bin/sass-lint"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Wolox/layout/issues"
   },
-  "homepage": "https://github.com/Wolox/layout#readme"
+  "homepage": "https://github.com/Wolox/layout#readme",
+  "devDependencies": {
+    "sass-lint": "^1.12.1"
+  }
 }
