@@ -1,0 +1,27 @@
+{
+  "name": "wolox-layout",
+  "version": "0.0.1",
+  "description": "Wolox generic layout for frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wolox/layout.git"
+  },
+  "keywords": [
+    "layout",
+    "wolox",
+    "scss",
+    "web",
+    "frontend",
+    "landing"
+  ],
+  "author": "Braian Dickson & Francisco Iglesias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wolox/layout/issues"
+  },
+  "homepage": "https://github.com/Wolox/layout#readme"
+}
