@@ -39,9 +39,9 @@ If you want to import the 'wolox-bootstrap' in this way:
 
 ## Usage
 
-If you import the `wolox-boostrap` file:
+### General import of Wolox-boostrap
 
-* Will generate a series of classes like:
+This will generate a series of classes like:
 ```sass
 .m-0 { margin: 0; }
 .m-1 { margin: 10px; }
@@ -61,10 +61,9 @@ If you import the `wolox-boostrap` file:
 }
 
 // And so on for every type of margin and padding from 0 to 200px.
-
 ```
-
-* To generate a flexbox layout you can do;
+### Layout API interface
+To generate a flexbox layout you can do:
 ```html
 <div class="column middle">...</div>
 
@@ -80,8 +79,39 @@ If you import the `wolox-boostrap` file:
 
 In summary, for vertical alignment we use `top`, `middle`, `bottom` and for horizontal alignment: `start`, `center`, `end`.
 
-In case of including only the separation file the way to create this custom classes is:
+| Column  | Class name  |
+| :------------ |:---------------:|
+| `align-items: center`      | `column center` |
+| `align-items: flex-end`      | `column end` |
+| `align-items: flex-start`      | `column start` |
+| `justify-content: center`      | `column middle` |
+| `justify-content: flex-end`      | `column bottom` |
+| `justify-content: flex-start`      | `column top` |
+| `justify-content: space-between`      | `column space-between` |
+| `justify-content: space-around`      | `column space-around` |
 
+
+| Row  | Class name  |
+| :------------ |:---------------:|
+| `align-items: center`      | `row middle` |
+| `align-items: flex-end`      | `row bottom` |
+| `align-items: flex-start`      | `row top` |
+| `justify-content: center`      | `row center` |
+| `justify-content: flex-end`      | `row end` |
+| `justify-content: flex-start`      | `row start` |
+| `justify-content: space-between`      | `row space-between` |
+| `justify-content: space-around`      | `row space-around` |
+
+For responsive classes (with 960px as breakpoint) append `-sm` suffix to the class.
+
+
+```html
+<div class="row space-between space-around-sm">
+  ...
+</div>
+```
+### Margins and Paddings generator
+In case of including only the separation file the way to create this custom classes is
 ```scss
 @include generate-layout(property, orientation, max-value, min-value, scale, suffix, breakpoint);
 ```
