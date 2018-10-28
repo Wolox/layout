@@ -26,9 +26,7 @@ npm i wolox-layout
 yarn add wolox-layout
 ```
 
-2- Include the wolox-bootstrap.scss before the index file of your CSS/SCSS to have paddings, margins, and layout already generated all toghether. Or you can import them separately.
-
-If you want to import the 'wolox-bootstrap' in this way:
+2. Import the `wolox-bootstrap.scss` to have margins, and layout all toghether. Or you can import them separately if needed.
 
 ```scss
 @import '~wolox-bootstrap/wolox-bootstrap';
@@ -42,7 +40,7 @@ If you want to import the 'wolox-bootstrap' in this way:
 ### General import of Wolox-boostrap
 
 This will generate a series of classes like:
-```sass
+```scss
 .m-0 { margin: 0; }
 .m-1 { margin: 10px; }
 ...
