@@ -108,6 +108,32 @@ For responsive classes (with 960px as breakpoint) append `-sm` suffix to the cla
   ...
 </div>
 ```
+
+#### Order and flex value
+This generator also creates clases to manipulate `order` and `flex` properties.
+
+```scss
+@for $i from 1 through 3 {
+  .order-#{$i} {
+    order: $i;
+  }
+}
+```
+This snippet will create this classes
+
+```scss
+.order-1 { order: 1 }
+.order-2 { order: 2 }
+.order-3 { order: 3 }
+```
+
+And for flex:
+```scss
+.item-1 { flex: 1 }
+.item-2 { flex: 2 }
+.item-3 { flex: 3 }
+```
+
 ### Margins and Paddings generator
 In case of including only the separation file the way to create this custom classes is
 ```scss
