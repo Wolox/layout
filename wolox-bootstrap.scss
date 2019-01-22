@@ -18,14 +18,3 @@ $breakpoint: 960 !default;
 @include generate-layout('margin','right', $max-value, $min-value, $scale);
 @include generate-layout('margin','', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
 @include generate-layout('margin','', $max-value, $min-value, $scale);
-
-@include generate-layout('padding','top', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
-@include generate-layout('padding','top', $max-value, $min-value, $scale);
-@include generate-layout('padding','bottom', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
-@include generate-layout('padding','bottom', $max-value, $min-value, $scale);
-@include generate-layout('padding','left', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
-@include generate-layout('padding','left', $max-value, $min-value, $scale);
-@include generate-layout('padding','right', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
-@include generate-layout('padding','right', $max-value, $min-value, $scale);
-@include generate-layout('padding','', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
-@include generate-layout('padding','', $max-value, $min-value, $scale);
