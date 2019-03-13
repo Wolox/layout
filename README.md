@@ -7,7 +7,7 @@
 
 ## Features
 
-* `separations.scss` file contains all the margin class generators for yogit pur own stylesheet.
+* `separations.scss` file contains all the margin class generators for your own stylesheet.
 * `layout.scss` contains a series of classes that can be used to define a page's layout using flexbox.
 
 ## Installation
@@ -39,7 +39,8 @@ yarn add wolox-layout
 
 ### General import of Wolox-boostrap
 
-This will generate a series of classes like:
+This will generate a series of classes based on the default minimum (0), maximum (200px) and scale (10px) that looks like this:
+
 ```scss
 .m-0 { margin: 0; }
 .m-1 { margin: 10px; }
@@ -120,7 +121,7 @@ In summary, for vertical alignment we use `top`, `middle`, `bottom` and for hori
 | `justify-content: space-between`      | `row space-between` |
 | `justify-content: space-around`      | `row space-around` |
 
-For responsive classes (with 960px as breakpoint) append `-sm` suffix to the class.
+For responsive classes (using 960px as the default breakpoint) append `-sm` suffix to the class.
 
 
 ```html
@@ -149,44 +150,27 @@ This snippet will create this classes
 
 And for flex:
 ```scss
-.item-1 { flex: 1 }
-.item-2 { flex: 2 }
-.item-3 { flex: 3 }
-```
+.item-1 {
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+}
 
-### Margins generator
-In case of including only the separation file the way to create this custom classes is
-```scss
-@include generate-layout(property, orientation, max-value, min-value, scale, suffix, breakpoint);
-```
+.item-2 {
+  min-width: 0;
+  min-height: 0;
+  flex: 2;
+}
 
-For example:
-```scss
-@include generate-layout('margin','top', 1000, 0, 10, 'sm', 960);
-
-// Will generate
-
-@media (max-width: 960px) {
-.m-top-0-sm { margin: 0; }
-.m-top-1-sm { margin: 10px; }
-...
-.m-top-100-sm { margin: 1000px; }
+.item-3 {
+  min-width: 0;
+  min-height: 0;
+  flex: 3;
 }
 ```
 
-If you don't give a suffix and breakpoint will generate classes without media query
-
-```scss
-@include generate-layout('margin','top', 1000, 0, 10);
-
-// Will generate
-.m-top-0 { margin: 0; }
-.m-top-1 { margin: 10px; }
-...
-.m-top-100 { margin: 1000px; }
-```
 ## About
 
-This project is maintained by [Braian Dickson](https://github.com/braiandickson) & [Francisco Iglesias](https://github.com/frankiglesias) and it was written by [Wolox](http://www.wolox.com.ar).
+This project is maintained by [Francisco Iglesias](https://github.com/frankiglesias) and it was written by [Wolox](http://www.wolox.com.ar).
 
 ![Wolox](https://raw.githubusercontent.com/Wolox/press-kit/master/logos/logo_banner.png)
