@@ -7,7 +7,7 @@
 
 ## Features
 
-* `separations.scss` file contains all the margin class generators for your own stylesheet.
+* `separations.scss` file contains all the margin class generators for yogit pur own stylesheet.
 * `layout.scss` contains a series of classes that can be used to define a page's layout using flexbox.
 
 ## Installation
