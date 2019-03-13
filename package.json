@@ -4,7 +4,7 @@
   "description": "Wolox generic layout for frontend projects",
   "main": "index.js",
   "scripts": {
-    "style-lint": "find ./src -name \\**.scss | xargs ./node_modules/.bin/stylelint --config .stylelintrc --syntax scss",
+    "style-lint": "find . -name \\**.scss | xargs ./node_modules/.bin/stylelint --config .stylelintrc --syntax scss",
     "precommit": "npm run style-lint"
   },
   "repository": {
@@ -29,7 +29,12 @@
     "sass-lint": "^1.12.1"
   },
   "dependencies": {
+    "eslint-config-wolox": "^2.3.0",
     "husky": "^1.3.1",
-    "stylelint": "^9.10.1"
+    "stylelint": "^9.10.1",
+    "stylelint-config-wolox": "^1.0.5",
+    "stylelint-no-indistinguishable-colors": "^1.2.1",
+    "stylelint-processor-html": "^1.0.0",
+    "stylelint-scss": "^3.5.4"
   }
 }
