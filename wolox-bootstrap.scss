@@ -1,0 +1,30 @@
+@import 'separations';
+
+@import 'layout';
+
+$min-value: 0 !default;
+$max-value: 200 !default;
+$scale: 10 !default;
+$suffix-sm: 'sm' !default;
+$breakpoint: 960 !default;
+
+@include generate-layout('margin','top', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
+
+@include generate-layout('margin','top', $max-value, $min-value, $scale);
+
+@include generate-layout(
+  'margin', 'bottom', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
+
+@include generate-layout('margin','bottom', $max-value, $min-value, $scale);
+
+@include generate-layout('margin','left', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
+
+@include generate-layout('margin','left', $max-value, $min-value, $scale);
+
+@include generate-layout('margin','right', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
+
+@include generate-layout('margin','right', $max-value, $min-value, $scale);
+
+@include generate-layout('margin','', $max-value, $min-value, $scale, $suffix-sm, $breakpoint);
+
+@include generate-layout('margin','', $max-value, $min-value, $scale);

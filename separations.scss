@@ -1,0 +1,50 @@
+@mixin generate-layout ($prop, $orientation, $max, $min, $sc, $sufix:'', $breakpoint:null) {
+
+  @if $min >= 0 {
+    $unscaled-min-top: $min / $sc;
+    $unscaled-max-top: $max / $sc;
+
+    @if (str-length($sufix) > 0) {
+
+      @media (max-width: $breakpoint) {
+
+        @for $i from $unscaled-min-top through $unscaled-max-top {
+          /* stylelint-disable max-nesting-depth */
+
+          @if (str-length($orientation) > 0) {
+            .#{str-slice($prop, 0, 1)}-#{$orientation}-#{$i}-#{$sufix} {
+              #{$prop}-#{$orientation}: #{$i * $sc}px;
+            }
+          }
+
+          @else {
+            .#{str-slice($prop, 0, 1)}-#{$i}-#{$sufix} {
+              #{$prop}: #{$i * $sc}px;
+            }
+          }
+          /* stylelint-enable */
+        }
+      }
+    }
+
+    @else {
+
+      @for $i from $unscaled-min-top through $unscaled-max-top {
+        /* stylelint-disable max-nesting-depth */
+
+        @if (str-length($orientation) > 0) {
+          .#{str-slice($prop, 0, 1)}-#{$orientation}-#{$i} {
+            #{$prop}-#{$orientation}: #{$i * $sc}px;
+          }
+        }
+
+        @else {
+          .#{str-slice($prop, 0, 1)}-#{$i} {
+            #{$prop}: #{$i * $sc}px;
+          }
+        }
+        /* stylelint-enable */
+      }
+    }
+  }
+}
