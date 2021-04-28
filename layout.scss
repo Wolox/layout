@@ -126,7 +126,7 @@ $max-order-size: 3 !default;
   }
 }
 
-@media screen and (max-width: $media-breakpont) {
+@media screen and (max-width: $media-breakpoint) {
   .column-sm {
     display: flex;
     flex-direction: column;
