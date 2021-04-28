@@ -1,5 +1,5 @@
 {
-  "name": "wolox-layout",
+  "name": "@wolox/layout",
   "version": "0.0.1",
   "description": "Wolox generic layout for frontend projects",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "frontend",
     "landing"
   ],
-  "author": "Francisco Iglesias",
+  "author": "Wolox",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Wolox/layout/issues"
